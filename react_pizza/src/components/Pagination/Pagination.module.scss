@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffdf8c;
+    border-radius: 30px;
+    cursor: pointer;
+    &:not(:last-child){
+      margin-right: 10px; 
+    }
+  }
+  :global {
+    .selected {
+      background-color: #ffdf8c;
+    }
+    .previous,
+    .next {
+      font-size: 25px;
+      font-weight: 800;
+      opacity: 1;
+      &.disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+}
