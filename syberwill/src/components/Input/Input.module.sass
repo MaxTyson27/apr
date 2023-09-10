@@ -1,0 +1,29 @@
+@import '../../sass/_vars'
+  
+.root
+  // max-width: 277px
+  // height: 68px
+  position: relative
+  margin: 0 auto 15px
+
+.input 
+  background-color: transparent 
+  display: block
+  border: 1px solid #03E7D9
+  border-radius: 15px
+  height: 100%
+  width: 100%
+  color: rgba(255,255,255, 0.6)
+  padding: 0 15px
+  position: relative
+  z-index: 2
+  &:focus
+    border-color: #FFFFFF
+
+.placeholder
+  color: rgba(255,255,255, 0.6)
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 1

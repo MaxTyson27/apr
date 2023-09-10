@@ -1,0 +1,25 @@
+@import '../../sass/_vars'
+  
+.root
+  position: absolute
+  &::before
+    content: ''
+    +center-item(absolute)
+    width: 70px
+    height: 70px
+    border-radius: 50%
+    background-color: #B8C7FF
+    filter: blur(30px)
+    opacity: 0
+    transition: .4s
+  &:hover 
+    &::before
+      opacity: 1
+
+.figure
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
+  background-color: #BDBDBD1A
+  position: relative
+  z-index: 3
+  width: 100%
+  height: 100%

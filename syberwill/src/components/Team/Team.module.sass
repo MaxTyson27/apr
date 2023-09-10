@@ -1,0 +1,121 @@
+@import '../../sass/_vars'
+  
+.root
+  margin-bottom: 100px
+  background-repeat: no-repeat
+  background-size: 1200px
+  background-position: top 110px center
+
+.inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 30px
+
+.text
+  color: #fff
+  opacity: 0.6
+  text-align: center
+
+.item
+  position: relative
+  &_top 
+    margin-bottom: 30px
+    &.active
+      .circle
+        top: 100px
+        &::after,
+        &::before
+          opacity: 1
+      .circle_second
+        width: 230px
+        height: 230px
+        top: 80px
+        opacity: 0
+      .circle_third
+        display: none
+  &_content
+    margin-top: 330px
+    position: relative
+    max-width: 560px
+    width: 100%
+    background-color: #fff
+    color: #1F1F1F
+    border-radius: 15px
+    padding: 30px
+    height: 205px
+    &_top
+      display: flex
+      justify-content: space-between
+      margin-bottom: 15px
+  &_text
+    opacity: 0.6
+
+.name,
+.prof
+  font-weight: 700
+  font-size: 20px
+  line-height: 25.2px
+
+.prof
+  @extend %gradient-text
+
+.dots
+  position: absolute
+
+.circle
+  transition: all .5s
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  height: 200px
+  width: 200px
+  border-radius: 50%
+  &::after,
+  &::before
+    transition: all .5s
+    opacity: 0
+  &::before
+    content: ''
+    position: absolute
+    border: 1px solid $accent
+    width: 110%
+    height: 110%
+    top: -10px
+    left: -10px
+    border-radius: 50%
+  &::after
+    content: ''
+    position: absolute
+    border: 1px solid $accent
+    width: 105%
+    height: 105%
+    top: -5px
+    left: -5px
+    border-radius: 50%
+
+  img
+    margin: 0 auto 15px
+    transition: .6s
+    position: relative
+    z-index: 3
+  &_second
+    width: 40px
+    height: 40px
+    background-color: #fff
+    border-radius: 50%
+    transition: 1s
+    position: absolute
+    top: 220px
+    left: 50%
+    transform: translateX(-50%)
+  &_third
+    width: 20px
+    height: 20px
+    background-color: #fff
+    border-radius: 50%
+    position: absolute
+    top: 280px
+    left: 50%
+    transform: translateX(-50%)
